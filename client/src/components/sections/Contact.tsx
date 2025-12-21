@@ -113,7 +113,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>E-Mail</FormLabel>
                         <FormControl>
-                          <Input placeholder="info@firma.de" {...field} />
+                          <Input placeholder="info@handwerk-stark-digital.de" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -126,7 +126,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>Telefon</FormLabel>
                         <FormControl>
-                          <Input placeholder="030 12345678" {...field} />
+                          <Input placeholder="+49 157 51709853" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

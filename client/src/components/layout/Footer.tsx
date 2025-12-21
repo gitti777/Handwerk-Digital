@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 font-heading font-bold text-2xl tracking-tighter text-white">
               <Hammer className="h-8 w-8 text-secondary" />
-              <span>HANDWERK<span className="text-secondary">STARKDIGITAL</span></span>
+              <span>HANDWERK<span className="text-secondary">STARK</span>DIGITAL</span>
             </div>
             <p className="text-primary-foreground/80 text-sm max-w-xs">
               Wir bringen deutsches Handwerk ins digitale Zeitalter. Ehrlich, direkt und professionell.
@@ -28,7 +28,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-secondary" />
-                <span>hallo@handwerk-digital.de</span>
+                <span>info@handwerk-stark-digital.de</span>
               </li>
             </ul>
           </div>
@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-bold text-white">Rechtliches</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-secondary">Impressum</a></li>
+              <li><a href="/impressum" className="hover:text-secondary">Impressum</a></li>
               <li><a href="#" className="hover:text-secondary">Datenschutz</a></li>
               <li><a href="#" className="hover:text-secondary">AGB</a></li>
             </ul>
