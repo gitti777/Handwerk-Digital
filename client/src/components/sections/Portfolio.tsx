@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
-import heatingThumb from "@assets/generated_images/heating_technician_installing_modern_system.png";
+import heatingThumb from "@assets/heizung1_1766324985366.png";
 import placeholder1 from "@assets/generated_images/empty_placeholder_for_future_project_1.png";
 import placeholder2 from "@assets/generated_images/empty_placeholder_for_future_project_2.png";
 import { useState } from "react";

@@ -38,7 +38,6 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li><a href="/impressum" className="hover:text-secondary">Impressum</a></li>
               <li><a href="#" className="hover:text-secondary">Datenschutz</a></li>
-              <li><a href="#" className="hover:text-secondary">AGB</a></li>
             </ul>
           </div>
 
@@ -58,7 +57,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-primary-foreground/60">
-          © {new Date().getFullYear()} Handwerk Digital. Alle Rechte vorbehalten.
+          © {new Date().getFullYear()} HANDWERKSTARKDIGITAL. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>
