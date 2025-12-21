@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
-import painterThumb from "@assets/generated_images/painter_website_thumbnail.png";
+import painterThumb from "@assets/maler_full_1.png";
 import placeholder2 from "@assets/generated_images/empty_placeholder_for_future_project_2.png";
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     id: "painter",
-    title: "Malerbetrieb Müller & Söhne",
+    title: "Maler Meisterbetrieb Arnold",
     category: "Komplett-Website",
     image: painterThumb,
     description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
