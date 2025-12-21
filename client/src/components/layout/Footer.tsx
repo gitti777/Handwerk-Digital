@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 font-heading font-bold text-2xl tracking-tighter text-white">
               <Hammer className="h-8 w-8 text-secondary" />
-              <span>HANDWERK<span className="text-secondary">DIGITAL</span></span>
+              <span>HANDWERK<span className="text-secondary">STARKDIGITAL</span></span>
             </div>
             <p className="text-primary-foreground/80 text-sm max-w-xs">
               Wir bringen deutsches Handwerk ins digitale Zeitalter. Ehrlich, direkt und professionell.
@@ -20,11 +20,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span>Handwerkerstraße 1, 10115 Berlin</span>
+                <span>Marktplatz 9, 69250 Schönau</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span>030 123 456 78</span>
+                <span>+4915751709853</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-secondary" />

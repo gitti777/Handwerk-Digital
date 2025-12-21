@@ -19,7 +19,7 @@ export function Navbar() {
           <Link href="/">
             <a className="flex items-center space-x-2 font-heading font-bold text-2xl tracking-tighter text-primary">
               <Hammer className="h-8 w-8 text-secondary" />
-              <span>HANDWERK<span className="text-secondary">DIGITAL</span></span>
+              <span>HANDWERK<span className="text-secondary">STARKDIGITAL</span></span>
             </a>
           </Link>
 

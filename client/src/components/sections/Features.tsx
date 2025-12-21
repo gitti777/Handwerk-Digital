@@ -16,7 +16,7 @@ const features = [
   {
     icon: Clock,
     title: "Schnelle Umsetzung",
-    description: "Wir wissen, dass Sie keine Zeit zu verlieren haben. Ihre neue Website steht in der Regel innerhalb von 2-4 Wochen.",
+    description: "Wir wissen, dass Sie keine Zeit zu verlieren haben. Ihre neue Website steht in der Regel innerhalb von 14 Tagen.",
   },
   {
     icon: Trophy,

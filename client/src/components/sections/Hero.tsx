@@ -62,7 +62,7 @@ export function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-secondary" />
-                <span>Made in Germany</span>
+                <span>Entwickelt vom Profi Informatiker</span>
               </div>
             </div>
           </motion.div>

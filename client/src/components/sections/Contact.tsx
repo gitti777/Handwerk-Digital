@@ -68,7 +68,7 @@ export function Contact() {
                 "Endlich eine Agentur, die versteht, wie wir Handwerker ticken. Schnell, unkompliziert und das Ergebnis kann sich sehen lassen."
               </p>
               <div className="mt-4 text-sm text-muted-foreground font-bold">
-                — Michael Bauer, Malermeister Bauer GmbH
+                — Falk Bartelt, Schreiner
               </div>
             </div>
           </div>
