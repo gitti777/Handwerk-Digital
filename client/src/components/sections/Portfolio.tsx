@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
-import placeholder1 from "@assets/generated_images/empty_placeholder_for_future_project_1.png";
+import painterThumb from "@assets/generated_images/painter_website_thumbnail.png";
 import placeholder2 from "@assets/generated_images/empty_placeholder_for_future_project_2.png";
 import { useState } from "react";
 
@@ -18,12 +18,12 @@ const projects = [
     demoUrl: "/portfolio/heating-demo" // This will be a route we create
   },
   {
-    id: "placeholder1",
-    title: "Projekt #2",
-    category: "In Arbeit",
-    image: placeholder1,
-    description: "Demnächst verfügbar.",
-    demoUrl: "#"
+    id: "painter",
+    title: "Malerbetrieb Müller & Söhne",
+    category: "Komplett-Website",
+    image: painterThumb,
+    description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
+    demoUrl: "/portfolio/painter-demo"
   },
   {
     id: "placeholder2",
