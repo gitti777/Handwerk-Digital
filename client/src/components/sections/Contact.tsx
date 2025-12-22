@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import meetingImg from "@assets/generated_images/friendly_male_craftsman_in_a_consultation_or_planning_meeting_setting..png";
+import meetingImg from "@assets/generated_images/handshake_between_a_craftsman_in_workwear_and_a_modern_web_developer..png";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein."),
