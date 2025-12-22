@@ -40,12 +40,12 @@ export function Portfolio() {
     <section id="portfolio" className="py-24 bg-background border-t border-border/50">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4 border-primary/20 text-primary">Referenzen</Badge>
+          <Badge variant="outline" className="mb-4 border-primary/20 text-primary">Beispielprojekte</Badge>
           <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-primary">
             Unsere Arbeit spricht für sich.
           </h2>
           <p className="text-muted-foreground text-lg">
-            Werfen Sie einen Blick auf unsere aktuellen Projekte. Echte Handwerksbetriebe, echte Ergebnisse.
+            Werfen sie einen Blick auf ein paar Beispielhafte Websites verschiedener Handwerksbranchen. Es handelt sich hier um Beispiele Texte Bilder Designs können nach belieben angepasst werden.
           </p>
         </div>
 

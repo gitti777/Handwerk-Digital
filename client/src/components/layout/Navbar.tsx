@@ -9,7 +9,7 @@ export function Navbar() {
   const links = [
     { href: "#features", label: "Warum Wir" },
     { href: "#services", label: "Leistungen" },
-    { href: "#portfolio", label: "Referenzen" },
+    { href: "#portfolio", label: "Beispielprojekte" },
   ];
 
   return (
