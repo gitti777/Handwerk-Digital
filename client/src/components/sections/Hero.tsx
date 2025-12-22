@@ -15,7 +15,6 @@ export function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/60" />
       </div>
-
       <div className="container relative z-10 px-4 md:px-6 py-20">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <motion.div 
@@ -36,10 +35,7 @@ export function Hero() {
               </span>
             </h1>
             
-            <p className="max-w-[600px] text-lg text-slate-300 md:text-xl leading-relaxed">
-              Sie sind Profi auf der Baustelle. Wir sind Profis im Netz. 
-              Gewinnen Sie mehr Kunden und qualifizierte Mitarbeiter mit einer Website, die Ihr Handwerk widerspiegelt.
-            </p>
+            <p className="max-w-[600px] text-lg text-slate-300 md:text-xl leading-relaxed">Sie sind Profi in ihrem Handwerk. Wir sind Profis im Netz. Gewinnen Sie mehr Kunden und qualifizierte Mitarbeiter mit einer Website, die Ihr Unternehmen professionell in Szene setzt.</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact">
@@ -68,7 +64,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-      
       {/* Abstract decorative element */}
       <div className="absolute bottom-0 right-0 w-1/3 h-4 bg-secondary" />
       <div className="absolute bottom-4 right-0 w-1/4 h-4 bg-white/10" />
