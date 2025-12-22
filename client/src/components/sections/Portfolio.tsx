@@ -45,7 +45,7 @@ export function Portfolio() {
             Unsere Arbeit spricht für sich.
           </h2>
           <p className="text-muted-foreground text-lg">
-            Werfen sie einen Blick auf ein paar Beispielhafte Websites verschiedener Handwerksbranchen. Es handelt sich hier um Beispiele Texte Bilder Designs können nach belieben angepasst werden.
+            Werfen Sie einen Blick auf ein paar beispielhafte Websites verschiedener Handwerksbranchen. Es handelt sich hier um Beispiele – Texte, Bilder und Designs können nach Belieben angepasst werden.
           </p>
         </div>
 
