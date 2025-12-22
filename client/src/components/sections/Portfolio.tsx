@@ -20,10 +20,10 @@ const projects = [
   {
     id: "painter",
     title: "Maler Meisterbetrieb Arnold",
-    category: "In Arbeit",
+    category: "Komplett-Website",
     image: painterThumb,
     description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
-    demoUrl: "#"
+    demoUrl: "/portfolio/painter-demo"
   },
   {
     id: "placeholder2",
