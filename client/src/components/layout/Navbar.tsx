@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Hammer } from "lucide-react";
+import { Menu, X, Hammer, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {links.map((link) => (
               <a 
                 key={link.href} 
@@ -34,11 +34,20 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="#contact">
-              <Button className="bg-secondary hover:bg-secondary/90 text-white font-bold rounded-sm uppercase tracking-wide">
-                Kostenloses Erstgespräch
-              </Button>
-            </a>
+            
+            <div className="flex items-center gap-4 ml-4">
+              <a href="https://wa.me/4915751709853" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="gap-2 border-green-600 text-green-600 hover:bg-green-50 font-bold">
+                   <MessageCircle className="h-4 w-4" />
+                   WhatsApp
+                </Button>
+              </a>
+              <a href="#contact">
+                <Button className="bg-secondary hover:bg-secondary/90 text-white font-bold rounded-sm uppercase tracking-wide">
+                  Kostenloses Erstgespräch
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Toggle */}
@@ -65,6 +74,12 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a href="https://wa.me/4915751709853" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+              <Button variant="outline" className="w-full gap-2 border-green-600 text-green-600 hover:bg-green-50 font-bold">
+                 <MessageCircle className="h-4 w-4" />
+                 WhatsApp Chat starten
+              </Button>
+            </a>
             <a href="#contact" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">
                 Kontakt aufnehmen
