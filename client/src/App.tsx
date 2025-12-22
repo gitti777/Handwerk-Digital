@@ -7,7 +7,6 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Impressum from "@/pages/Impressum";
 import HeatingDemo from "@/pages/HeatingDemo";
-import PainterDemo from "@/pages/PainterDemo";
 
 function Router() {
   return (
@@ -15,7 +14,6 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/impressum" component={Impressum} />
       <Route path="/portfolio/heating-demo" component={HeatingDemo} />
-      <Route path="/portfolio/painter-demo" component={PainterDemo} />
       <Route component={NotFound} />
     </Switch>
   );
