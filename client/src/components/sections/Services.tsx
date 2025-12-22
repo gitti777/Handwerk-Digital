@@ -30,9 +30,9 @@ export function Services() {
                 "Individuelles Webdesign passend zu Ihrem Firmenauftritt",
                 "Suchmaschinenoptimierung (SEO) für lokale Sichtbarkeit",
                 "Rechtssicheres Impressum & Datenschutzerklärung",
-                "Integration von Kontaktformularen & Terminbuchung",
-                "Hosting, Wartung & Pflege inklusive",
-                "Professionelle E-Mail-Adressen"
+                "Integration von Kontaktformularen",
+                "Hosting, Wartung & Pflege",
+                "Professionelle E-Mail-Adressen passend zu Ihrer Domain"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="mt-1 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -42,6 +42,23 @@ export function Services() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8 p-6 bg-white dark:bg-slate-950 rounded-lg border border-border shadow-sm">
+              <h3 className="font-bold text-lg mb-4 text-primary">Transparente Kosten</h3>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-muted-foreground">Website Erstellung</p>
+                  <div className="text-3xl font-bold text-primary">999 €</div>
+                  <p className="text-xs text-muted-foreground">Einmalige Kosten</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-muted-foreground">Full-Service Paket</p>
+                  <div className="text-3xl font-bold text-secondary">20 €</div>
+                  <p className="text-xs text-muted-foreground">Monatlich</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1 leading-tight">Hosting, Wartung, Pflege & Online-Garantie</p>
+                </div>
+              </div>
+            </div>
 
             <div className="pt-4">
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-sm">
