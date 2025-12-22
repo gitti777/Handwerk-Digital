@@ -4,8 +4,8 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
-import painterThumb from "@assets/maler_full_1.png";
-import placeholder2 from "@assets/generated_images/empty_placeholder_for_future_project_2.png";
+import painterThumb from "@assets/maler_v3_1.png";
+import rooferThumb from "@assets/dach_v1_1.png";
 import { useState } from "react";
 
 const projects = [
@@ -26,12 +26,12 @@ const projects = [
     demoUrl: "/portfolio/painter-demo"
   },
   {
-    id: "placeholder2",
-    title: "Projekt #3",
-    category: "In Arbeit",
-    image: placeholder2,
-    description: "Demnächst verfügbar.",
-    demoUrl: "#"
+    id: "roofer",
+    title: "Dachwerk Meister",
+    category: "Komplett-Website",
+    image: rooferThumb,
+    description: "Professioneller Auftritt für Dachdecker mit Leistungsübersicht.",
+    demoUrl: "/portfolio/roofer-demo"
   },
 ];
 
