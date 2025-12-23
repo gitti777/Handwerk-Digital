@@ -15,7 +15,7 @@ const projects = [
     category: "Komplett-Website",
     image: heatingThumb,
     description: "Moderne Unternehmenswebsite mit Terminbuchung und Notdienst-Funktion.",
-    demoUrl: "#/portfolio/heating-demo" // This will be a route we create
+    demoUrl: "/portfolio/heating-demo" // This will be a route we create
   },
   {
     id: "painter",
@@ -23,7 +23,7 @@ const projects = [
     category: "Komplett-Website",
     image: painterThumb,
     description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
-    demoUrl: "#/portfolio/painter-demo"
+    demoUrl: "/portfolio/painter-demo"
   },
   {
     id: "roofer",
@@ -31,19 +31,11 @@ const projects = [
     category: "Komplett-Website",
     image: rooferThumb,
     description: "Professioneller Auftritt für Dachdecker mit Leistungsübersicht.",
-    demoUrl: "#/portfolio/roofer-demo"
+    demoUrl: "/portfolio/roofer-demo"
   },
 ];
 
 export function Portfolio() {
-  const [baseUrl, setBaseUrl] = useState("");
-
-  useEffect(() => {
-    // Ensure we have the full base URL including protocol and host
-    // and strip any existing hash from it before appending the new one
-    setBaseUrl(window.location.href.split('#')[0]);
-  }, []);
-
   return (
     <section id="portfolio" className="py-24 bg-background border-t border-border/50">
       <div className="container px-4 md:px-6 mx-auto">
@@ -97,7 +89,7 @@ export function Portfolio() {
                       {/* Close button is handled by Dialog primitives usually but we can add custom header controls */}
                     </div>
                     <iframe 
-                      src={baseUrl ? `${baseUrl}${project.demoUrl.replace('#', '')}` : ''} 
+                      src={`/#${project.demoUrl}`} 
                       className="w-full flex-grow border-0 bg-white"
                       title={`Vorschau der Website für ${project.title}`}
                     />
