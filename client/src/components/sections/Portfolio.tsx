@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
@@ -78,8 +78,9 @@ export function Portfolio() {
               </DialogTrigger>
               
               {project.demoUrl !== "#" ? (
-                <DialogContent className="max-w-[90vw] h-[90vh] p-0 overflow-hidden bg-background border-none">
+                <DialogContent className="max-w-[90vw] h-[90vh] p-0 overflow-hidden bg-background border-none" aria-describedby={undefined}>
                   <div className="relative w-full h-full flex flex-col">
+                    <DialogTitle className="sr-only">Live Vorschau: {project.title}</DialogTitle>
                     <div className="bg-primary text-primary-foreground p-3 flex justify-between items-center shrink-0">
                       <div className="font-bold text-sm flex items-center gap-2">
                          <span className="w-2 h-2 rounded-full bg-green-500 block animate-pulse"/>
@@ -90,7 +91,7 @@ export function Portfolio() {
                     <iframe 
                       src={project.demoUrl} 
                       className="w-full flex-grow border-0 bg-white"
-                      title="Website Demo"
+                      title={`Vorschau der Website für ${project.title}`}
                     />
                   </div>
                 </DialogContent>

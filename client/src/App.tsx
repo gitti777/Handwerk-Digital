@@ -1,5 +1,4 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -10,6 +9,28 @@ import Impressum from "@/pages/Impressum";
 import HeatingDemo from "@/pages/HeatingDemo";
 import PainterDemo from "@/pages/PainterDemo";
 import RooferDemo from "@/pages/RooferDemo";
+import { useState, useEffect } from "react";
+
+// Custom hash location hook to avoid React 19/wouter compatibility issues
+const currentLocation = () => {
+  return window.location.hash.replace(/^#/, "") || "/";
+};
+
+const navigate = (to: string) => {
+  window.location.hash = to;
+};
+
+const useHashLocation = () => {
+  const [loc, setLoc] = useState(currentLocation());
+
+  useEffect(() => {
+    const handler = () => setLoc(currentLocation());
+    window.addEventListener("hashchange", handler);
+    return () => window.removeEventListener("hashchange", handler);
+  }, []);
+
+  return [loc, navigate];
+};
 
 function Router() {
   return (
