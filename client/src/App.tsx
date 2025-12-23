@@ -48,6 +48,20 @@ function Router() {
 }
 
 function App() {
+  // Simple query parameter based routing for standalone demos
+  // This avoids complex router interactions when running inside iframes
+  const [demoMode, setDemoMode] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const demo = params.get("demo");
+    if (demo) setDemoMode(demo);
+  }, []);
+
+  if (demoMode === "heating") return <HeatingDemo />;
+  if (demoMode === "painter") return <PainterDemo />;
+  if (demoMode === "roofer") return <RooferDemo />;
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

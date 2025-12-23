@@ -89,7 +89,7 @@ export function Portfolio() {
                       {/* Close button is handled by Dialog primitives usually but we can add custom header controls */}
                     </div>
                     <iframe 
-                      src={`/#${project.demoUrl}`} 
+                      src={`?demo=${project.id}`} 
                       className="w-full flex-grow border-0 bg-white"
                       title={`Vorschau der Website für ${project.title}`}
                     />
