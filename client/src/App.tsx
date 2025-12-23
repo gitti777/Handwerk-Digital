@@ -29,7 +29,7 @@ const useHashLocation = () => {
     return () => window.removeEventListener("hashchange", handler);
   }, []);
 
-  return [loc, navigate];
+  return [loc, navigate] as [string, (to: string) => void];
 };
 
 function Router() {

@@ -6,7 +6,7 @@ import { ExternalLink, X } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
 import painterThumb from "@assets/maler_v3_1.png";
 import rooferThumb from "@assets/dach_v1_1.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -36,6 +36,14 @@ const projects = [
 ];
 
 export function Portfolio() {
+  const [baseUrl, setBaseUrl] = useState("");
+
+  useEffect(() => {
+    // Ensure we have the full base URL including protocol and host
+    // and strip any existing hash from it before appending the new one
+    setBaseUrl(window.location.href.split('#')[0]);
+  }, []);
+
   return (
     <section id="portfolio" className="py-24 bg-background border-t border-border/50">
       <div className="container px-4 md:px-6 mx-auto">
@@ -89,7 +97,7 @@ export function Portfolio() {
                       {/* Close button is handled by Dialog primitives usually but we can add custom header controls */}
                     </div>
                     <iframe 
-                      src={project.demoUrl} 
+                      src={baseUrl ? `${baseUrl}${project.demoUrl.replace('#', '')}` : ''} 
                       className="w-full flex-grow border-0 bg-white"
                       title={`Vorschau der Website für ${project.title}`}
                     />
