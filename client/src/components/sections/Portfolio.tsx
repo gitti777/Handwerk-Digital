@@ -1,12 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, X } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import heatingThumb from "@assets/heizung1_1766324985366.png";
 import painterThumb from "@assets/maler_v3_1.png";
 import rooferThumb from "@assets/dach_v1_1.png";
-import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -15,7 +12,7 @@ const projects = [
     category: "Komplett-Website",
     image: heatingThumb,
     description: "Moderne Unternehmenswebsite mit Terminbuchung und Notdienst-Funktion.",
-    demoUrl: "/portfolio/heating-demo" // This will be a route we create
+    demoUrl: "?demo=heating"
   },
   {
     id: "painter",
@@ -23,7 +20,7 @@ const projects = [
     category: "Komplett-Website",
     image: painterThumb,
     description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
-    demoUrl: "/portfolio/painter-demo"
+    demoUrl: "?demo=painter"
   },
   {
     id: "roofer",
@@ -31,7 +28,7 @@ const projects = [
     category: "Komplett-Website",
     image: rooferThumb,
     description: "Professioneller Auftritt für Dachdecker mit Leistungsübersicht.",
-    demoUrl: "/portfolio/roofer-demo"
+    demoUrl: "?demo=roofer"
   },
 ];
 
@@ -51,52 +48,36 @@ export function Portfolio() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <Dialog key={project.id}>
-              <DialogTrigger asChild>
-                <Card className="overflow-hidden cursor-pointer group hover:shadow-lg transition-all duration-300 border-border/50">
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white font-bold flex items-center gap-2">
-                        <ExternalLink className="h-5 w-5" />
-                        Ansehen
-                      </span>
-                    </div>
+            <a 
+              key={project.id} 
+              href={project.demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="overflow-hidden cursor-pointer group hover:shadow-lg transition-all duration-300 border-border/50 h-full">
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-bold flex items-center gap-2">
+                      <ExternalLink className="h-5 w-5" />
+                      In neuem Tab öffnen
+                    </span>
                   </div>
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-bold text-lg group-hover:text-secondary transition-colors">{project.title}</h3>
-                      <Badge variant="secondary" className="text-xs">{project.category}</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{project.description}</p>
-                  </CardContent>
-                </Card>
-              </DialogTrigger>
-              
-              {project.demoUrl !== "#" ? (
-                <DialogContent className="max-w-[90vw] h-[90vh] p-0 overflow-hidden bg-background border-none" aria-describedby={undefined}>
-                  <div className="relative w-full h-full flex flex-col">
-                    <DialogTitle className="sr-only">Live Vorschau: {project.title}</DialogTitle>
-                    <div className="bg-primary text-primary-foreground p-3 flex justify-between items-center shrink-0">
-                      <div className="font-bold text-sm flex items-center gap-2">
-                         <span className="w-2 h-2 rounded-full bg-green-500 block animate-pulse"/>
-                         Live Vorschau: {project.title}
-                      </div>
-                      {/* Close button is handled by Dialog primitives usually but we can add custom header controls */}
-                    </div>
-                    <iframe 
-                      src={`?demo=${project.id}`} 
-                      className="w-full flex-grow border-0 bg-white"
-                      title={`Vorschau der Website für ${project.title}`}
-                    />
+                </div>
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-bold text-lg group-hover:text-secondary transition-colors">{project.title}</h3>
+                    <Badge variant="secondary" className="text-xs">{project.category}</Badge>
                   </div>
-                </DialogContent>
-              ) : null}
-            </Dialog>
+                  <p className="text-sm text-muted-foreground">{project.description}</p>
+                </CardContent>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
