@@ -17,10 +17,10 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/">
-            <a className="flex items-center space-x-2 font-heading font-bold text-2xl tracking-tighter text-primary">
+            <div className="flex items-center space-x-2 font-heading font-bold text-2xl tracking-tighter text-primary cursor-pointer">
               <Hammer className="h-8 w-8 text-secondary" />
               <span>HANDWERK<span className="text-secondary">STARK</span>DIGITAL</span>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
