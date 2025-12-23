@@ -12,6 +12,15 @@ export function Navbar() {
     { href: "#portfolio", label: "Beispielprojekte" },
   ];
 
+  const handleScroll = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,8 +37,9 @@ export function Navbar() {
             {links.map((link) => (
               <a 
                 key={link.href} 
-                href={link.href} 
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                href={link.href}
+                onClick={handleScroll(link.href)}
+                className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary cursor-pointer"
               >
                 {link.label}
               </a>
@@ -42,7 +52,7 @@ export function Navbar() {
                    WhatsApp
                 </Button>
               </a>
-              <a href="#contact">
+              <a href="#contact" onClick={handleScroll("#contact")}>
                 <Button className="bg-secondary hover:bg-secondary/90 text-white font-bold rounded-sm uppercase tracking-wide">
                   Kostenloses Erstgespräch
                 </Button>
@@ -68,8 +78,8 @@ export function Navbar() {
               <a 
                 key={link.href} 
                 href={link.href}
-                className="text-base font-medium text-foreground hover:text-secondary"
-                onClick={() => setIsOpen(false)}
+                className="text-base font-medium text-foreground hover:text-secondary cursor-pointer"
+                onClick={handleScroll(link.href)}
               >
                 {link.label}
               </a>
@@ -80,7 +90,7 @@ export function Navbar() {
                  WhatsApp Chat starten
               </Button>
             </a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>
+            <a href="#contact" onClick={handleScroll("#contact")}>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">
                 Kontakt aufnehmen
               </Button>

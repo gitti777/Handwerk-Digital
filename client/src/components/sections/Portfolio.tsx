@@ -15,7 +15,7 @@ const projects = [
     category: "Komplett-Website",
     image: heatingThumb,
     description: "Moderne Unternehmenswebsite mit Terminbuchung und Notdienst-Funktion.",
-    demoUrl: "/portfolio/heating-demo" // This will be a route we create
+    demoUrl: "#/portfolio/heating-demo" // This will be a route we create
   },
   {
     id: "painter",
@@ -23,7 +23,7 @@ const projects = [
     category: "Komplett-Website",
     image: painterThumb,
     description: "Farbenfrohes Design mit Portfolio-Galerie und Angebotsrechner.",
-    demoUrl: "/portfolio/painter-demo"
+    demoUrl: "#/portfolio/painter-demo"
   },
   {
     id: "roofer",
@@ -31,7 +31,7 @@ const projects = [
     category: "Komplett-Website",
     image: rooferThumb,
     description: "Professioneller Auftritt für Dachdecker mit Leistungsübersicht.",
-    demoUrl: "/portfolio/roofer-demo"
+    demoUrl: "#/portfolio/roofer-demo"
   },
 ];
 
